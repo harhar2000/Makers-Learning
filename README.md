@@ -2,8 +2,6 @@
 
 ## Introduction
 
-Welcome to `python-foundations`, a repository dedicated to practicing and demonstrating Python fundamentals. This repository contains a series of completed exercises covering various aspects of Python, from basic method calls to more advanced concepts like classes and error handling.
-
 Welcome to `python-foundations`, a comprehensive repository I designed to revise, practice and master Python fundamentals. This repository is a compilation of completed exercises that span a range of topics in Python programming. It starts with the basics, such as method calls and functions with arguments and progresses through complex subjects like conditional logic, classes and error handling. This collection serves not only as a practice workbook but also as a reference guide for core Python concepts.
 
 
