@@ -1,4 +1,3 @@
-
 # == LIST EXERCISES ==
 
 # Method name: first_element
@@ -26,7 +25,6 @@ def second_element(lst):
 
 print(second_element([1, 2, 3]))
 
-
 # Method name: last_element
 # Purpose: returns the last element of the given list
 # Arguments: one list
@@ -39,7 +37,6 @@ def last_element(lst):
 
 print(last_element([1, 2, 3]))
 
-
 # Method name: first_two_elements
 # Purpose: returns the first two elements of the given list
 # Arguments: one list
@@ -47,10 +44,10 @@ print(last_element([1, 2, 3]))
 #   Call:    first_two_elements([1, 2, 3])
 #   Returns: [1, 2]
 
-def first_two_elements(lst):
-    return lst[0:2]
+def first_two_element(lst):
+    return lst[:-1]
 
-print(first_two_elements([1, 2, 3]))
+print(first_two_element([1, 2, 3]))
 
 
 # Method name: first_three_elements
@@ -60,11 +57,10 @@ print(first_two_elements([1, 2, 3]))
 #   Call:    first_three_elements([1, 2, 3, 4])
 #   Returns: [1, 2, 3]
 
-def first_three_elements(lst):
-    return lst[0:3]
+def first_three_element(lst):
+    return lst[:-1]
 
-print(first_three_elements([1, 2, 3, 4]))
-
+print(first_three_element([1, 2, 3, 4]))
 
 # Method name: total
 # Purpose: returns the sum of all the elements in the given list
@@ -74,9 +70,13 @@ print(first_three_elements([1, 2, 3, 4]))
 #   Returns: 6
 
 def total(lst):
-    return sum(lst)
-        
+    for i in lst:
+        i = i + i
+    return i 
+
 print(total([1, 2, 3]))
+
+
 
 
 # Method name: lowest_number
@@ -87,9 +87,11 @@ print(total([1, 2, 3]))
 #   Returns: 2
 
 def lowest_number(lst):
-    return min(lst)
+   return min(lst)
+
 
 print(lowest_number([4, 2, 6]))
+
 
 
 # Method name: highest_number
@@ -99,11 +101,12 @@ print(lowest_number([4, 2, 6]))
 #   Call:    highest_number([4, 6, 2])
 #   Returns: 6
 
+
 def highest_number(lst):
-    return max(lst)
+   return max(lst)
 
-print(highest_number([4, 6 ,2]))
 
+print(highest_number([4, 2, 6]))
 
 # Method name: the_beatles
 # Purpose: returns the list ['john', 'paul', 'george', 'ringo']
@@ -117,7 +120,6 @@ def the_beatles():
 
 print(the_beatles())
 
-
 # Method name: i_joined_the_beatles
 # Purpose: adds the given name to the list ['john', 'paul', 'george', 'ringo']
 # Arguments: one string
@@ -125,11 +127,12 @@ print(the_beatles())
 #   Call:    i_joined_the_beatles('yoko')
 #   Returns: ['john', 'paul', 'george', 'ringo', 'yoko']
 
-def i_joined_the_beatles(new_member):
-    lst = ['john', 'paul', 'george', 'ringo']
-    return lst + [new_member]
+def i_joined_the_beatles(string):
+    beatles = ['john', 'paul', 'george', 'ringo']
+    beatles.append(string)
+    return beatles
 
-print(i_joined_the_beatles("yoko"))
+print(i_joined_the_beatles('yoko'))
 
 
 # Method name: we_joined_the_beatles
@@ -139,13 +142,12 @@ print(i_joined_the_beatles("yoko"))
 #   Call:    we_joined_the_beatles(['yoko', 'stuart'])
 #   Returns: ['john', 'paul', 'george', 'ringo', 'yoko', 'stuart']
 
-original_beatles = ['john', 'paul', 'george', 'ringo']
-def we_joined_the_beatles(lst):
-    beatles = original_beatles.copy()
+def  we_joined_the_beatles(lst):
+    beatles = ['john', 'paul', 'george', 'ringo']
     beatles.extend(lst)
     return beatles
+
 print(we_joined_the_beatles(['yoko', 'stuart']))
-    
 
 # Method name: remove_nones_from_list
 # Purpose: removes all the None values from the given list
@@ -154,12 +156,17 @@ print(we_joined_the_beatles(['yoko', 'stuart']))
 #   Call:    remove_nones_from_list([1, None, 2, None, 3])
 #   Returns: [1, 2, 3]
 
-lst = [1, None, 2, None, 3]
+
 def remove_nones_from_list(lst):
-    return [item for item in lst if item is not None]
-        
+    new_list = []
+    for i in lst:
+        if i is not None:
+            new_list.append(i)
+    return new_list
+
+
 print(remove_nones_from_list([1, None, 2, None, 3]))
-    
+
 
 # Method name: double_list
 # Purpose: returns a list with all the elements of the given list repeated twice
@@ -169,8 +176,12 @@ print(remove_nones_from_list([1, None, 2, None, 3]))
 #   Returns: [1, 2, 3, 1, 2, 3]
 
 def double_list(lst):
-    return lst *2
+    new_list = []
+    new_list = lst + lst
+    return new_list
+
 print(double_list([1, 2, 3]))
+
 
 
 # Method name: unique_elements
@@ -179,15 +190,14 @@ print(double_list([1, 2, 3]))
 # Example:
 #   Call:    unique_elements([1, 2, 1, 3, 2, 3])
 #   Returns: [1, 2, 3]
-
+ 
 def unique_elements(lst):
-    new_list = []
-    for item in lst:
-        if item not in new_list:
-            new_list.append(item)
-    return new_list
+    new_list = set(lst)
+    return list(new_list)
+
 
 print(unique_elements([1, 2, 1, 3, 2, 3]))
+
 
 
 # Method name: add_to_list
@@ -197,8 +207,8 @@ print(unique_elements([1, 2, 1, 3, 2, 3]))
 #   Call:    add_to_list(["a", "b", "c"], "d")
 #   Returns: ["a", "b", "c", "d"]
 
-def add_to_list(lst, item):
-    lst.append(item)
+def add_to_list(lst, x):
+    lst.append(x)
     return lst
 
 print(add_to_list(["a", "b", "c"], "d"))
@@ -214,11 +224,12 @@ print(add_to_list(["a", "b", "c"], "d"))
 #   Call:    new_band_member({"bass": "flea"})
 #   Returns: {"vocalist": "miss piggy", "lead_guitar": "scooter", "bass": "flea"}
 
-band_members = {"vocalist": "miss piggy", "lead_guitar": "scooter"}
 
-def new_band_member(new_member):
-    band_members.update(new_member)
-    return band_members
+def new_band_member(dict):
+    new_dict =  {"vocalist": "miss piggy", "lead_guitar": "scooter"}
+    new_dict.update(dict)
+    return new_dict
+
 
 print(new_band_member({"bass": "flea"}))
 
@@ -230,10 +241,12 @@ print(new_band_member({"bass": "flea"}))
 #   Call:    all_values({"a": 1, "b": 2, "c": 3})
 #   Returns: [1, 2, 3]
 
-def all_values(dct):
-    return list(dct.values())
+def all_values(dict):
+    new_list = list(dict.values())
+    return new_list 
 
 print(all_values({"a": 1, "b": 2, "c": 3}))
+
 
 
 # Method name: all_keys
@@ -243,8 +256,9 @@ print(all_values({"a": 1, "b": 2, "c": 3}))
 #   Call:    all_keys({"a": 1, "b": 2, "c": 3})
 #   Returns: ["a", "b", "c"]
 
-def all_keys(dct):
-    return list(dct.keys())
+def all_keys(dict):
+    new_list = list(dict.keys())
+    return new_list
 
 print(all_keys({"a": 1, "b": 2, "c": 3}))
 
@@ -256,15 +270,10 @@ print(all_keys({"a": 1, "b": 2, "c": 3}))
 #   Call:    remove_nones_from_dictionary({"a": 1, "b": None, "c": 3})
 #   Returns: {"a": 1, "c": 3}
 
-def remove_nones_from_dictionary(dct):
-    new_dct = {}
-    for key, value in dct.items():
-        if value is not None:
-            new_dct[key] = value
-    return new_dct
-
-result = remove_nones_from_dictionary({"a": 1, "b": None, "c": 3})
-print(result)
+def remove_nones_from_dictionary(dict):
+    new_dict = {key: value for key, value in dict.items() if value is not None}
+    return new_dict
+print(remove_nones_from_dictionary({"a": 1, "b": None, "c": 3}))
 
 
 # Method name: touch_in
@@ -274,8 +283,9 @@ print(result)
 #   Call:    touch_in('Aldgate East', '2022/01/30 17:12')
 #   Returns: {'entrypoint': 'Aldgate East', 'time': '2022/01/30 17:12'}
 
-def touch_in(station, time):
-    new_dct = {'entrypoint': station, 'time': time}
-    return new_dct
-result = touch_in('Aldgate East', '2022/01/30 17:12')
-print(result)
+def touch_in(x, y):
+    new_dict = {'entrypoint': x, 'time': y}
+    return new_dict
+     
+
+print(touch_in('Aldgate East', '2022/01/30 17:12'))
