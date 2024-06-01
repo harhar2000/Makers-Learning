@@ -1,6 +1,6 @@
 # Module Overview
 
-Here is the course content for my time at [Makers](https://makers.tech/). As I revisit the content, I'll update and push my code into the respective folder. I will additionally be pushing other revision-based code into this repo such as the OOP folder
+Here is the course content for my time at [Makers](https://makers.tech/). As I revisit the content, I'll update and push my code into the respective folder. I will additionally be pushing other revision-based code into this repo such as the [OOP](https://github.com/harhar2000/Makers-Learning/tree/main/OOP) folder
 
 ## Python Foundations and Developer Tools
 
