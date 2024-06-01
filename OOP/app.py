@@ -1,7 +1,7 @@
-
-
 # Without Inheritance
 
+# This section defines different classes for people of different nationalities without using inheritance.
+# Each class has its own implementation of the say_hello method, resulting in code duplication.
 
 class AmericanPerson():
     def say_hello():
@@ -24,6 +24,10 @@ class AustralianPerson():
         return "Hey pal, how are you?"
     
 # With Inheritance
+# Inheritance reduces code duplication.
+# Base class Person with say_hello() method is created.
+# Specific person classes inherit from Person.
+
 class Person():
     def __init__(self, name):
         self.name = name 
@@ -41,23 +45,25 @@ class AustralianPerson(Person):
     pass
 
 
-## Polymorphism 
+# Polymorphism 
+# GermanPerson class overrides say_hello method from Person class, demonstrating polymorphism. 
+# This allows GermanPerson to provide its own specific implementation of the method.
+
 class GermanPerson(Person):
     def say_hello(self):
         return "Hallo, Guten Tag!"
-
-
-
+    
 # ___________________________________________________________
+
 
 # Abstraction and Encapsulation
 
+# WriteObject class encapsulates details about the type of writing object.
+# Notebook class encapsulates logic of writing with different types of writing objects using private methods.
 
 class WriteObject():
     def __init__(self, type):
         self.type = type
-
-
         
 class Notebook():
     def __init__(self, write_object):
@@ -105,6 +111,10 @@ notebook = Notebook(write_object)
 notebook.write(notebook.write_object, "My daily memo")
 
 ## With Abstraction
+
+# Uses abstract classes to define common interface for different writing objects.
+# WriteObject class cannot be instantiated directly, forcing  use of specific subclasses like Pencil, BallPen and InkPen, which implement the write method.
+
 
 class WriteObject(): # abstract
     def __init__(self):
@@ -167,8 +177,9 @@ class InkPen(WriteObject):
         # refill ink
         pass
 
-
+# Notebook class uses polymorphism to interact with different writing objects through a common interface.
 # BallPen, InkPen and Pencil
+
 class Notebook():
     def __init__(self, write_object):
         self.write_object = write_object
@@ -179,6 +190,8 @@ class Notebook():
 
 
 ## Enapsulation
+# Shows encapsulation by hiding internal state and implementation details of MobilePhone class. Methods for accessing and modifying memory and for launching applications.
+
 
 class MobilePhone():
     def __init__(self, memory: int, cores: int, colour: str):
@@ -200,6 +213,9 @@ def __start_application(self, memory_count, application):
     pass
 
 # Exclusion
+# Provides basic implementation of Post class without any encapsulation, abstraction, inheritance or polymorphism. 
+# Directly exposes its attributes.
+
 class Post():
     def __init__(self, id, content):
         self.id = id
