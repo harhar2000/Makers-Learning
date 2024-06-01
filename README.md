@@ -33,9 +33,7 @@ Here is the course content for my time at [Makers](https://makers.tech/). As I r
 - Build and run containers with database-backed web applications
 - Deploy containers to the cloud using CI-CD
 
-## MakersBnb
-
-[GitHub Repository](https://github.com/harhar2000/MakersBnB)
+## [MakersBnb](https://github.com/harhar2000/MakersBnB)
 
 ### Objective:
 - Explain why and how agile processes are used in software development
