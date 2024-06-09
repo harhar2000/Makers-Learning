@@ -1,3 +1,8 @@
+import datetime
+from email.policy import HTTP
+
+from psutil import users
+
 # Without Inheritance
 
 # This section defines different classes for people of different nationalities without using inheritance.
@@ -220,3 +225,96 @@ class Post():
     def __init__(self, id, content):
         self.id = id
         self.content = content
+
+
+# SOLID Principles
+## Single Responsibility principle        - Responsible for only one thing
+## Open/Closed principle                  - functions/classes/objects are open for extention but closed for modification
+## Liskov's segregation principle         - Child object can replace parent object anytime without breaking application 
+## Interface segregation principle
+## Dependency Inversion princple
+
+
+
+## Single Responsibility principle
+
+### not singularly responsible 
+### singularly responsible 
+
+class Account():
+    # only the accounts in the business are responsible for requiring features for the Account object
+    pass
+
+#### 
+
+class Transaction():
+    def __init__(self, sum, type):
+        self.sum = sum
+        self.type = type
+        self.date = datetime.now()
+
+class StatementPrinter():
+    def __init__(self):
+        return 
+    
+    def print_statment(self, transaction):
+        # make a new statement string to store statement data
+        # add header
+        # iterate over transactions data
+        # add transaction data for each transaction object to the string
+        # add footer
+        # return or print statement string
+        return
+
+class BankAccount():
+    def __init__(self):
+        self.balance = 0
+        self.transactions = []
+        self.printer = StatementPrinter()
+
+    def withdraw(self, sum):
+        # do the checks
+        # make new transaction data
+        # withdraw
+        return 
+    
+    def deposit(self, sum):
+        # do the checks
+        # make new transaciton data
+         # self.transaction.add()
+        # {'type': 'deposit', 'sum':sum, 'date' : datetime.now()} new Transation(sum, type)
+        # deposit
+        return
+    
+    def print_statements(self, transaction):
+        # self.printer.printer_statement(transaction)
+        
+        return
+    
+## Open / Closed princple  
+
+## Liskov's subsitution principle
+
+class HTTPRequest():
+    pass
+
+class HTTPResponse():
+    pass
+
+class JSONResponse(HTTPResponse):
+    pass
+
+class Application():
+    users = []
+    def send_response(res :HTTPResponse): #  HTTPResponse
+    res.data.users = users
+    return res
+
+class SomeOtherApplication():
+    def deal_with_response():
+        response = JSONResponse()
+        send_response(response)
+
+## Interface Segragation principle
+
+## Dependency Inversion principle 
