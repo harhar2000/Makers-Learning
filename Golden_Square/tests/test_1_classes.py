@@ -1,6 +1,6 @@
 from lib._1_classes import *
 
-def test_reminds_user_todo_task():
+def test_reminds_the_user_to_do_a_task():
     reminder = Reminder("Kay")
     reminder.remind_me_to("Walk the dog")
     result = reminder.remind()
@@ -40,12 +40,23 @@ def test_add_multiple_strings():
     result = sb.output()
     assert result == "HelloJohn"
 
+def test_string_count():
+    sb = StringBuilder()
+    sb.add("hello")
+    result = sb.size()
+    assert result == 5
 
-def test_initial_format():
-    pass
 
-def add_single_gratitude():
-    pass
+def test_add_single_gratitude():
+    gt = Gratitudes()
+    gt.add("pets")
+    result = gt.format()
+    assert result == "Be grateful for: pets"
 
-def add_multiple_gratitudes():
-    pass
+
+def test_add_mulitple_gratitudes():
+    gt = Gratitudes()
+    gt.add("pets")
+    gt.add("cheese")
+    result = gt.format()
+    assert result == "Be grateful for: pets, cheese"
