@@ -73,3 +73,65 @@ def test_reading_chunk_with_simple_contents_and_standard_wpm_and_minutes():
     entry = DiaryEntry(title, contents)
     expected_chunk = "word " * 200  # Since wpm is 200 and minutes is 1, it returns all 200 words
     assert entry.reading_chunk(wpm, minutes).strip() == expected_chunk.strip()
+
+
+
+
+def test_checks_capital_first_letter_and_ending_full_stop():
+    text = "Hello."
+    grammar = GrammarStats()
+    assert grammar.check(text) == True
+
+
+
+def test_percentage_good_no_texts_checked():
+    grammar = GrammarStats()
+    assert grammar.percentage_good() == 0
+
+def test_percentage_good_all_texts_valid():
+    grammar = GrammarStats()
+    grammar.check("Hello.")
+    grammar.check("World.")
+    grammar.check("This is a valid text.")
+    assert grammar.percentage_good() == 100
+
+def test_percentage_good_no_texts_valid():
+    grammar = GrammarStats()
+    grammar.check("hello")
+    grammar.check("world")
+    grammar.check("this is not valid text")
+    assert grammar.percentage_good() == 0
+
+def test_percentage_good_some_texts_valid():
+    grammar = GrammarStats()
+    grammar.check("Hello.")
+    grammar.check("world")
+    grammar.check("This is valid.")
+    grammar.check("this is not")
+    assert grammar.percentage_good() == 50
+
+def test_percentage_good_initially_no_texts_then_valid_texts():
+    grammar = GrammarStats()
+    assert grammar.percentage_good() == 0
+    grammar.check("Hello.")
+    grammar.check("World.")
+    assert grammar.percentage_good() == 100
+
+def test_percentage_good_initially_no_texts_then_invalid_texts():
+    grammar = GrammarStats()
+    assert grammar.percentage_good() == 0
+    grammar.check("hello")
+    grammar.check("world")
+    assert grammar.percentage_good() == 0
+
+def test_percentage_good_mixed_texts_over_time():
+    grammar = GrammarStats()
+    assert grammar.percentage_good() == 0
+    grammar.check("Hello.")
+    assert grammar.percentage_good() == 100
+    grammar.check("world")
+    assert grammar.percentage_good() == 50
+    grammar.check("This is valid.")
+    assert grammar.percentage_good() == 66
+    grammar.check("this is not")
+    assert grammar.percentage_good() == 50
