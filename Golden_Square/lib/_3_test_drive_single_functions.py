@@ -18,17 +18,12 @@ def leap_year(years):
     elif years % 4 != 0:
         return False
 
-
-
-
-
 def make_snippet(string):
     words = string.split()
     if len(words) > 5:
         return " ".join(words[:5]) + "..."
     else:
         return string
-
 
 
 def count_words(string):
