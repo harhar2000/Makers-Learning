@@ -660,165 +660,207 @@
 #   Call:    first_element([1, 2, 3])
 #   Returns: 1
 
-def first_element(lst):
-    return lst[0]
+# def first_element(lst):
+#     return lst[0]
 
-print(first_element([1, 2, 3]))
-
-
-# Method name: second_element
-# Purpose: returns the second element of the given list
-# Arguments: one list
-# Example:
-#   Call:    second_element([1, 2, 3])
-#   Returns: 2
-
-def second_element(lst):
-    return lst[1]
-
-print(second_element([1, 2, 3]))
-
-# Method name: last_element
-# Purpose: returns the last element of the given list
-# Arguments: one list
-# Example:
-#   Call:    last_element([1, 2, 3])
-#   Returns: 3
-
-def last_element(lst):
-    return lst[-1]
-
-print(last_element([1, 2, 3]))
+# print(first_element([1, 2, 3]))
 
 
-# Method name: first_two_elements
-# Purpose: returns the first two elements of the given list
-# Arguments: one list
-# Example:
-#   Call:    first_two_elements([1, 2, 3])
-#   Returns: [1, 2]
+# # Method name: second_element
+# # Purpose: returns the second element of the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    second_element([1, 2, 3])
+# #   Returns: 2
 
-def first_two_elements(lst):
-    return lst[:2]
+# def second_element(lst):
+#     return lst[1]
 
-print(first_two_elements([1, 2, 3]))
+# print(second_element([1, 2, 3]))
 
+# # Method name: last_element
+# # Purpose: returns the last element of the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    last_element([1, 2, 3])
+# #   Returns: 3
 
+# def last_element(lst):
+#     return lst[-1]
 
-# Method name: first_three_elements
-# Purpose: returns the first three elements of the given list
-# Arguments: one list
-# Example:
-#   Call:    first_three_elements([1, 2, 3, 4])
-#   Returns: [1, 2, 3]
-
-def first_three_elements(lst):
-    return lst[:3]
-
-print(first_three_elements([1, 2, 3, 4]))
+# print(last_element([1, 2, 3]))
 
 
-# Method name: total
-# Purpose: returns the sum of all the elements in the given list
-# Arguments: one list
-# Example:
-#   Call:    total([1, 2, 3])
-#   Returns: 6
+# # Method name: first_two_elements
+# # Purpose: returns the first two elements of the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    first_two_elements([1, 2, 3])
+# #   Returns: [1, 2]
 
-def total(lst):
-    for i in lst:
-        j = j + j
-        i = i + 1
-        return j
+# def first_two_elements(lst):
+#     return lst[:2]
 
-
-print(total([1, 2, 3]))
+# print(first_two_elements([1, 2, 3]))
 
 
 
-# Method name: lowest_number
-# Purpose: returns the lowest number in the given list
-# Arguments: one list
-# Example:
-#   Call:    lowest_number([4, 2, 6])
-#   Returns: 2
+# # Method name: first_three_elements
+# # Purpose: returns the first three elements of the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    first_three_elements([1, 2, 3, 4])
+# #   Returns: [1, 2, 3]
+
+# def first_three_elements(lst):
+#     return lst[:3]
+
+# print(first_three_elements([1, 2, 3, 4]))
+
+
+# # Method name: total
+# # Purpose: returns the sum of all the elements in the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    total([1, 2, 3])
+# #   Returns: 6
+
+# def total(lst):
+#     sum_total = 0 
+#     for i in lst:
+#         sum_total += i
+#     return sum_total
+
+# print(total([1, 2, 3]))
 
 
 
-# Method name: highest_number
-# Purpose: returns the highest number in the given list
-# Arguments: one list
-# Example:
-#   Call:    highest_number([4, 6, 2])
-#   Returns: 6
+# # Method name: lowest_number
+# # Purpose: returns the lowest number in the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    lowest_number([4, 2, 6])
+# #   Returns: 2
+
+# def lowest_number(lst):
+#     lst = sorted(lst)
+#     return lst[0]
+
+# print(lowest_number([4, 2, 6]))
 
 
+# # Method name: highest_number
+# # Purpose: returns the highest number in the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    highest_number([4, 6, 2])
+# #   Returns: 6
 
-# Method name: the_beatles
-# Purpose: returns the list ['john', 'paul', 'george', 'ringo']
-# Arguments: none
-# Example:
-#   Call:    the_beatles()
-#   Returns: ['john', 'paul', 'george', 'ringo']
+# def highest_number(lst):
+#     lst = sorted(lst)[::-1]
+#     return lst[0]
 
+# print(highest_number([4, 6, 2]))
 
+# # Method name: the_beatles
+# # Purpose: returns the list ['john', 'paul', 'george', 'ringo']
+# # Arguments: none
+# # Example:
+# #   Call:    the_beatles()
+# #   Returns: ['john', 'paul', 'george', 'ringo']
 
-# Method name: i_joined_the_beatles
-# Purpose: adds the given name to the list ['john', 'paul', 'george', 'ringo']
-# Arguments: one string
-# Example:
-#   Call:    i_joined_the_beatles('yoko')
-#   Returns: ['john', 'paul', 'george', 'ringo', 'yoko']
-
-
-
-# Method name: we_joined_the_beatles
-# Purpose: adds the given names to the list ['john', 'paul', 'george', 'ringo']
-# Arguments: one list
-# Example:
-#   Call:    we_joined_the_beatles(['yoko', 'stuart'])
-#   Returns: ['john', 'paul', 'george', 'ringo', 'yoko', 'stuart']
+# def the_beatles(lst):
+#     return lst
+# print(the_beatles(['john', 'paul', 'george', 'ringo']))
 
 
+# # Method name: i_joined_the_beatles
+# # Purpose: adds the given name to the list ['john', 'paul', 'george', 'ringo']
+# # Arguments: one string
+# # Example:
+# #   Call:    i_joined_the_beatles('yoko')
+# #   Returns: ['john', 'paul', 'george', 'ringo', 'yoko']
 
-# Method name: remove_nones_from_list
-# Purpose: removes all the None values from the given list
-# Arguments: one list
-# Example:
-#   Call:    remove_nones_from_list([1, None, 2, None, 3])
-#   Returns: [1, 2, 3]
+# def i_joined_the_beatles(string):
+#     beatles = ['john', 'paul', 'george', 'ringo']
+#     beatles.append(string)
+#     return beatles
+
+# print(i_joined_the_beatles('yoko'))
+
+# # Method name: we_joined_the_beatles
+# # Purpose: adds the given names to the list ['john', 'paul', 'george', 'ringo']
+# # Arguments: one list
+# # Example:
+# #   Call:    we_joined_the_beatles(['yoko', 'stuart'])
+# #   Returns: ['john', 'paul', 'george', 'ringo', 'yoko', 'stuart']
+
+# def we_joined_the_beatles(lst):
+#     beatles = ['john', 'paul', 'george', 'ringo']
+#     beatles.extend(lst)
+#     return beatles
+
+# print(we_joined_the_beatles(['yoko', 'stuart']))
+
+# # Method name: remove_nones_from_list
+# # Purpose: removes all the None values from the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    remove_nones_from_list([1, None, 2, None, 3])
+# #   Returns: [1, 2, 3]
+
+# def remove_nones_from_list(lst):
+#     return [item for item in lst if item is not None]
+
+# print(remove_nones_from_list([1, None, 2, None, 3]))
 
 
+# # Method name: double_list
+# # Purpose: returns a list with all the elements of the given list repeated twice
+# # Arguments: one list
+# # Example:
+# #   Call:    double_list([1, 2, 3])
+# #   Returns: [1, 2, 3, 1, 2, 3]
 
-# Method name: double_list
-# Purpose: returns a list with all the elements of the given list repeated twice
-# Arguments: one list
-# Example:
-#   Call:    double_list([1, 2, 3])
-#   Returns: [1, 2, 3, 1, 2, 3]
+# def double_list(lst):
+#     return [item for item in lst * 2]
+
+# print(double_list([1, 2, 3]))
+
+# # Method name: unique_elements
+# # Purpose: returns a list with all the unique elements of the given list
+# # Arguments: one list
+# # Example:
+# #   Call:    unique_elements([1, 2, 1, 3, 2, 3])
+# #   Returns: [1, 2, 3]
+
+# def unique_elements(lst):
+#     seen = set()
+#     unique = []
+#     for item in lst:
+#         if item not in seen:
+#             unique.append(item)
+#             seen.add(item)
+#     return unique
+
+# print(unique_elements([1, 2, 1, 3, 2, 3]))  # returns [1, 2, 3]
 
 
+# # Method name: add_to_list
+# # Purpose: adds the given element to the given list
+# # Arguments: one list and one element
+# # Example:
+# #   Call:    add_to_list(["a", "b", "c"], "d")
+# #   Returns: ["a", "b", "c", "d"]
 
-# Method name: unique_elements
-# Purpose: returns a list with all the unique elements of the given list
-# Arguments: one list
-# Example:
-#   Call:    unique_elements([1, 2, 1, 3, 2, 3])
-#   Returns: [1, 2, 3]
+# def add_to_list(lst, element):
+#     lst.append(element)
+#     return lst
 
-
-
-# Method name: add_to_list
-# Purpose: adds the given element to the given list
-# Arguments: one list and one element
-# Example:
-#   Call:    add_to_list(["a", "b", "c"], "d")
-#   Returns: ["a", "b", "c", "d"]
-
-
+# print(add_to_list(["a", "b", "c"], "d"))
 
 # == DICTIONARY EXERCISES ==
-
+dsdf
 # Method name: new_band_member
 # Purpose: merges a given dictionary into an existing dictionary
 # Arguments: one dictionary
