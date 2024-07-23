@@ -7,6 +7,7 @@ def assign_buyer_to_seller(sellers, buyers_requests):
                 mapping[buyer] = seller    
     return mapping
 
+
 sellers = {
   "seller1" : ["jeans", "t-shirt"],
   "seller2" : ["skirt", "dress"],
@@ -20,9 +21,12 @@ buyers_requests = {
   "buyer4" : "skirt"
 }
 
-# output =  {
+# example output =  {
 #   "buyer1" : "seller2",
 #   "buyer2" :"seller1",
 #   "buyer3" : "seller3",
 #   "buyer4" : "seller2"
 # }
+
+
+print(assign_buyer_to_seller(sellers, buyers_requests))
