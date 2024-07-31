@@ -1,4 +1,4 @@
-from lib.tdd import *
+from lib.tdd_depop import *
 
 def test_assign_buyer_to_seller():
     sellers = {"seller2": ["shorts"]}
