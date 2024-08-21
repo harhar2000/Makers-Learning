@@ -10,15 +10,14 @@ class BandPassFilter:
         self.soundwave = soundwave
         self.lower_limit = lower_limit
         self.upper_limit = upper_limit
-        
+
     def apply(self):
         for i in range(len(self.soundwave)):
             if self.soundwave[i] < self.lower_limit:
                 self.soundwave[i] = self.lower_limit
             elif self.soundwave[i] > self.upper_limit:
                 self.soundwave[i] = self.upper_limit
-
-        return self.soundwave
+        return soundwave
 
 soundwave = [80, 90, 100, 110, 120]
 filter    = BandPassFilter(soundwave, 90, 110)

@@ -15,7 +15,7 @@
 # OUTPUTS 
     #   string connecting colour with num repre. colour count respectively 
 
-class Report():
+class Report:
     def __init__(self, str):
         self.str = str
 
@@ -34,7 +34,6 @@ class Report():
             elif word == "Red":
                 red_count += 1
         print(f"Green: {green_count}, Amber: {amber_count}, Red: {red_count}" )
-
 
 report = Report("Green, Green, Amber, Red, Green")
 report.generate()

@@ -307,8 +307,8 @@ class JSONResponse(HTTPResponse):
 class Application():
     users = []
     def send_response(res :HTTPResponse): #  HTTPResponse
-    res.data.users = users
-    return res
+        res.data.users = users
+        return res
 
 class SomeOtherApplication():
     def deal_with_response():
