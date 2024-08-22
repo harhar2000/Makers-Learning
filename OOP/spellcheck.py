@@ -1,18 +1,5 @@
-'''
-spellchecker 
-
-input text. incorrect words get highlighted
-'''
-
-# SpellChecker class
-#   check function
-#       Takes a string. checks if spelt correctly. 
-#       if not - returns incorrect string
-
-# Additionally ^ It would’ve helped to design the algorithm if you’re starting from more simple examples, eg:
-# ‘My’ => ‘My’ 
-# ‘My name’ => ‘My name’
-# ‘My name si’ => ‘My name ~si’
+# Write a program checking spelling of words in a given string and highlights misspelled words
+#  by surrounding them with special characters. 
 
 from spellchecker import SpellChecker as spc
 
