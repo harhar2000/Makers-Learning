@@ -1,17 +1,15 @@
 # Encapsulation in Python: A Beginner's Guide
 
-Encapsulation is a fundamental concept in object-oriented programming (OOP). It involves bundling together related data (state) and the methods (behaviour) that operate on that data into a single unit, known as a class. Encapsulation also entails controlling access to these data and methods, ensuring that only necessary parts are exposed to the outside world while protecting the rest.
+Encapsulation is a key concept in object-oriented programming (OOP). It means combining related data (like an object's properties) and the methods (functions) that work with that data into one unit, known as a class. Encapsulation controls access to these data and methods, ensuring that only necessary parts are exposed to the outside world while protecting the rest.
 
-## What is Encapsulation?
-
-Encapsulation is about hiding the internal state of an object and requiring all interaction to be performed through an object's methods. This ensures that the internal representation of an object is protected from unintended interference and misuse.
+Encapsulation hides the internal state of an object and makes sure all interactions happen through specific methods. This protects the object's data from being accidentally changed or misused.
 
 ## Why Use Encapsulation?
 
-1. **Data Protection**: By restricting access to certain components, encapsulation safeguards the integrity of the data.
-2. **Modularity**: Encapsulation allows you to compartmentalise code, making it easier to manage and understand.
-3. **Maintainability**: Encapsulated code is easier to maintain and less prone to errors since changes to the internal implementation do not affect external code.
-4. **Flexibility**: It allows you to change the internal workings of a class without affecting other parts of the programme that rely on it.
+1. **Protects Data**: Keeps certain parts of your code private, ensuring that data can't be changed accidentally.
+2. **Keeps Code Organised**: Helps break down code into manageable sections, making it easier to read and work with.
+3. **Maintainability**: Simpler to update and less likely to cause problems because changes inside a class don't affect other parts of your programme.
+4. **Flexibility**: Can modify how a class works internally without disrupting the rest of your code that depends on it.
 
 ## Basic Example of Encapsulation
 
