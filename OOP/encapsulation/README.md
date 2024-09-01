@@ -57,8 +57,19 @@ person1.set_age(-5)  # Output: Age must be positive
 
 #### Public and Private Attributes:
 
-- `name` is a public attribute, accessible directly using the object of the class.
-- `__age` is a private attribute (indicated by the double underscore `__`), which cannot be accessed directly from outside the class.
+- `name` is a public attribute, it can be accessed and modified from anywhere in and out the class
+- `__age` is a private attribute (indicated by the `__`), which cannot be accessed or modified directly from outside the class. We use this to protect sentitive data.
+
+    ##### When to Use Public Attributes
+
+    - When the attribute is part of the object's interface and you want it to be easily accessible.
+    - When you don’t need to enforce strict control over how the attribute is used or modified.
+
+    ##### When to Use Private Attributes
+
+    - When you need to protect the attribute from being accessed or modified directly.
+    - When you want to hide the implementation details of a class.
+    - When you need to enforce rules or conditions whenever the attribute is accessed or modified.
 
 #### Methods for Accessing Private Data:
 
