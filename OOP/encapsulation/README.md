@@ -1,6 +1,6 @@
 # Encapsulation in Python: A Beginner's Guide
 
-Encapsulation is a key concept in object-oriented programming (OOP). It means combining related data (like an object's properties) and the methods (functions) that work with that data into one unit, known as a class. Encapsulation controls access to these data and methods, ensuring that only necessary parts are exposed to the outside world while protecting the rest.
+Encapsulation is a key concept in object-oriented programming (OOP). It refers to the practice of bundling related data (attributes) and the methods (functions) that operate on that data within a single unit known as a class. Encapsulation also restricts direct access to some of an object's components, ensuring that only essential parts are exposed to the outside world while protecting the rest
 
 Encapsulation hides the internal state of an object and makes sure all interactions happen through specific methods. This protects the object's data from being accidentally changed or misused.
 
@@ -8,7 +8,7 @@ Encapsulation hides the internal state of an object and makes sure all interacti
 
 1. **Protects Data**: Keeps certain parts of your code private, ensuring that data can't be changed accidentally.
 2. **Keeps Code Organised**: Helps break down code into manageable sections, making it easier to read and work with.
-3. **Maintainability**: Simpler to update and less likely to cause problems because changes inside a class don't affect other parts of your programme.
+3. **Maintainability**: Simpifies updates and reduces likelihood of causing issues as internal workings of a class are hidden from other parts of your program. This abstraction allows you to change the internal implementation without affecting code that relies on the class.
 4. **Flexibility**: Can modify how a class works internally without disrupting the rest of your code that depends on it.
 
 ## Basic Example of Encapsulation
@@ -131,10 +131,10 @@ print(account.get_balance())  # Output: 1200
 
 - **Encapsulation allows the class to hide its data**: In the examples, the balance is hidden and can only be accessed or modified through the provided methods (`deposit`, `withdraw` and `get_balance`).
 
-- **Validation and Control**: The class controls how the data is modified, ensuring that it remains consistent and valid throughout the programme.
+- **Validation and Control**: The class controls how the data is modified, ensuring that it remains consistent and valid throughout the program.
 
 - **Improved Maintainability**: By encapsulating data and behaviour, your code becomes more modular and easier to maintain.
 
 ## Conclusion
 
-Encapsulation is a powerful feature in Python that helps protect data and ensure it is used in a controlled and predictable manner. By using private attributes and providing public methods to access and modify these attributes, you can make your code more robust, secure, and easier to maintain.
+Encapsulation is a powerful feature in Python that helps protect data and ensure it is used in a controlled and predictable manner. By using private attributes and providing public methods to access and modify these attributes, you can make your code more robust, secure, and easier to maintain. Encapsulation works hand in hand with other OOP principles like inheritance and polymorphism, contributing to the creation of modular, scalable and flexible code.
