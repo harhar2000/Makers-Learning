@@ -7,41 +7,17 @@
 # - Implement getter and setter methods for the __price attribute, ensuring the price is always positive.
 
 
-class Book:
-    def __init__(self, title, author, price):
-        self.title = title
-        self.author = author
-        self.__price = price
-
-    def get_price(self):
-        return self.__price
-    
-    def set_price(self, price):
-        if price > 0:
-            self.__price = price
-
-    def display_details(self, title, author, price):
-        print(f"{title}: by {author},  £{price}")
 
 
-# Create instance of Book class
-book1 = Book("1984", "George Orwell", 10.99)
+# book1 = Book("1984", "George Orwell", 10.99)
+# book1.display_details(book1.title, book1.author, book1.get_price())
+# print(f"Initial Price: £{book1.get_price()}")
+# book1.set_price(12.99)
+# print(f"Updated Price: £{book1.get_price()}")
+# book1.set_price(-5.00)  # This should print a warning
+# book1.display_details(book1.title, book1.author, book1.get_price())
 
-# Display details of book
-book1.display_details(book1.title, book1.author, book1.get_price())
 
-# Test getter method for price
-print(f"Initial Price: £{book1.get_price()}")
-
-# Test setter method with valid price
-book1.set_price(12.99)
-print(f"Updated Price: £{book1.get_price()}")
-
-# Test setter method with an invalid price
-book1.set_price(-5.00)  # This should print a warning
-
-# Display details again after price update
-book1.display_details(book1.title, book1.author, book1.get_price())
 
 
 # 2. Implement a Rectangle class:
@@ -49,50 +25,25 @@ book1.display_details(book1.title, book1.author, book1.get_price())
 # - Write methods to calculate the area and perimeter of the rectangle.
 # - Provide getter and setter methods for the __length and __width, ensuring they are positive numbers.
 
-class Rectangle:
-    def __init__(self, length, width):
-        self.__length = length
-        self.__width = width
-
-    def calc_area(self):
-        return self.__length * self.__width
-
-    def calc_perimeter(self):
-        return 2 * (self.__length + self.__width)
-
-    def get_length(self):
-        return self.__length
-
-    def set_length(self, length):
-        if length > 0:
-            self.__length = length
-        else:
-            print("Length must be above 0") 
-
-    def get_width(self):
-        return self.__width
-
-    def set_width(self, width):
-        if width > 0:
-            self.__width = width
-        else:
-            print("Length must be above 0") 
 
 
 
-rect = Rectangle(10, 5)
-print("Area:", rect.calc_area())  # Output should be 50
-print("Perimeter:", rect.calc_perimeter())  # Output should be 30
-print("Length:", rect.get_length())  # Output should be 10
-print("Width:", rect.get_width())  # Output should be 5
 
-rect.set_length(15)
-rect.set_width(7)
+# rect = Rectangle(10, 5)
+# print("Area:", rect.calc_area())  # Output should be 50
+# print("Perimeter:", rect.calc_perimeter())  # Output should be 30
+# print("Length:", rect.get_length())  # Output should be 10
+# print("Width:", rect.get_width())  # Output should be 5
 
-print("New Area:", rect.calc_area())  # Output should be 105
-print("New Perimeter:", rect.calc_perimeter())  # Output should be 44
+# rect.set_length(15)
+# rect.set_width(7)
 
-rect.set_length(-5)  # Should print "Length must be above 0"
+# print("New Area:", rect.calc_area())  # Output should be 105
+# print("New Perimeter:", rect.calc_perimeter())  # Output should be 44
+
+# rect.set_length(-5)  # Should print "Length must be above 0"
+
+
 
 
 
@@ -103,25 +54,23 @@ rect.set_length(-5)  # Should print "Length must be above 0"
 # - Provide methods to get and set the __grade, with validation that the grade must be between 0 and 100.
 
 
-class Student:
-    def __init__(self, name, grade):
-        self.name = name
-        self.__grade = grade
 
-    def get_grade(self):
-        return self.__grade
- 
-    def set_grade(self, grade):
-        if 0 <= grade <= 100:
-            self.__grade = grade
-        else:
-            print("Grade must be between 0-100")
 
-    def pass_or_fail(self):
-        if self.__grade < 50:
-            return "Fail"
-        else:
-            return "Pass"
+
+
+# student1 = Student("Alice", 85)
+# print(f"{student1.name}'s grade: {student1.get_grade()}")  # Output: Alice's grade: 85
+# print(f"Did {student1.name} pass? {student1.pass_or_fail()}")  # Output: Did Alice pass? Pass
+# student1.set_grade(45)
+# print(f"{student1.name}'s updated grade: {student1.get_grade()}")  # Output: Alice's updated grade: 45
+# print(f"Did {student1.name} pass? {student1.pass_or_fail()}")  # Output: Did Alice pass? Fail
+# student1.set_grade(150)  # Output: Grade must be between 0 and 100
+
+# student2 = Student("Bob", 30)
+# print(f"{student2.name}'s grade: {student2.get_grade()}")  # Output: Bob's grade: 30
+# print(f"Did {student2.name} pass? {student2.pass_or_fail()}")  # Output: Did Bob pass? Fail
+
+
 
 
 
@@ -131,6 +80,9 @@ class Student:
 # - Create a BankAccount class with attributes account_number, owner, and __balance.
 # - Implement methods to deposit and withdraw money, with checks to prevent overdrafts.
 # - Write a method to transfer money from one account to another, ensuring the transfer is valid.
+
+
+
 
 
 
@@ -206,3 +158,85 @@ class Student:
 # - Define a Company class with attributes like name, industry, and a private list of employees.
 # - Implement methods to hire, fire, and list employees.
 # - Implement a method to calculate the average salary of the employees, ensuring salaries are encapsulated and validated.
+
+
+
+
+# Beginner Level Answers
+
+# class Book:
+#     def __init__(self, title, author, price):
+#         self.title = title
+#         self.author = author
+#         self.__price = price
+
+#     def get_price(self):
+#         return self.__price
+    
+#     def set_price(self, price):
+#         if price > 0:
+#             self.__price = price
+
+#     def display_details(self, title, author, price):
+#         print(f"{title}: by {author},  £{price}")
+
+
+
+
+
+
+
+
+# class Rectangle:
+#     def __init__(self, length, width):
+#         self.__length = length
+#         self.__width = width
+
+#     def calc_area(self):
+#         return self.__length * self.__width
+
+#     def calc_perimeter(self):
+#         return 2 * (self.__length + self.__width)
+
+#     def get_length(self):
+#         return self.__length
+
+#     def set_length(self, length):
+#         if length > 0:
+#             self.__length = length
+#         else:
+#             print("Length must be above 0") 
+
+#     def get_width(self):
+#         return self.__width
+
+#     def set_width(self, width):
+#         if width > 0:
+#             self.__width = width
+#         else:
+#             print("Length must be above 0") 
+
+
+
+
+
+
+# class Student:
+#     def __init__(self, name:str, grade):
+#         self.name = name
+#         self.__grade = grade
+
+#     def get_grade(self):
+#         return self.__grade
+
+#     def set_grade(self, grade):
+#        if 0 <= grade <= 100:
+#            self.__grade = grade
+#        else:
+#            print("Grade must be between 0 and 100")
+
+#     def pass_or_fail(self):
+#         if self.__grade <= 50:
+#             return "Fail"
+#         else:
+#             return "Pass"
