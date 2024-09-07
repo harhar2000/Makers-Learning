@@ -105,11 +105,18 @@ class BankAccount:
         self.__balance -= amount
         return f"You withdrew {amount}. Your new balance is {self.__balance}"
         
-    def transfer_money(self, Target_account, bankaccount,):
+    def transfer_money(self, target_account, amount,):
         # transfer amount must not be more than available balance
         # ensure other account is valid - it should be another instance of BankAccount
-        # withdraw from one account
-        # deposit in another
+        # withdraw from one account -  deposit in another
+
+        if amount <=0:
+            return "Transfer amount must be positive. "
+        if self.__balance < amount:
+            return "Insufficient balance to complete the transfer. "
+        self.__balance -= amount
+        target_account.__balance += amount
+        return f"Transferred {amount} to account {target_account.account_number}"
 
  
 
