@@ -28,6 +28,7 @@
 
 
 
+
 # rect = Rectangle(10, 5)
 # print("Area:", rect.calc_area())  # Output should be 50
 # print("Perimeter:", rect.calc_perimeter())  # Output should be 30
@@ -51,7 +52,6 @@
 # - Define a Student class with attributes name and __grade.
 # - Implement a method to determine if the student has passed or failed based on the grade (pass mark is 50).
 # - Provide methods to get and set the __grade, with validation that the grade must be between 0 and 100.
-
 
 
 
@@ -121,27 +121,18 @@ class BankAccount:
 # Create two bank accounts
 account1 = BankAccount(12345, "Alice", 1000)
 account2 = BankAccount(67890, "Bob", 500)
-
-# Check the initial balances
 print(f"Alice's balance: {account1.check_balance()}")
 print(f"Bob's balance: {account2.check_balance()}")
 
-# Alice deposits 200 into her account
-print(account1.deposit(200))
 
-# Check Alice's new balance
+print(account1.deposit(200))
 print(f"Alice's balance after deposit: {account1.check_balance()}")
 
-# Bob withdraws 100 from his account
 print(account2.withdraw(100))
-
-# Check Bob's new balance
 print(f"Bob's balance after withdrawal: {account2.check_balance()}")
 
 # Alice transfers 300 to Bob
 print(account1.transfer_money(account2, 300))
-
-# Check both balances after the transfer
 print(f"Alice's balance after transfer: {account1.check_balance()}")
 print(f"Bob's balance after transfer: {account2.check_balance()}")
 
@@ -156,26 +147,38 @@ print(f"Bob's balance after transfer: {account2.check_balance()}")
 
 # 5. Implement a Car class:
 # - Define a Car class with attributes like make, model, year, and __mileage.
-# - Provide methods to update the mileage and calculate the car's age.
+# - Provide methods to update the mileage and calculate the car's age. update_mileage, calculate_age
 # - Ensure the mileage can only increase and not decrease.
 
 
 
 
 
+
+
+# my_car = Car("Toyota", "Corolla", 2015, 50000)
+# my_car.update_mileage(55000)  # Updates mileage
+# my_car.calculate_age()  # Returns the car's age
+
+
+
+
 # 6. Create a Library class:
 # - Create a Library class that manages a collection of books (hint: use the Book class from the first question).
-# - Implement methods to add a book, remove a book, and search for a book by title.
+# - Implement methods to add a book, remove a book, and search for a book by title. add_book, remove_book, search_by_title, list_all_books
 # - Implement a method to list all books in the library.
 
 
+# my_library = Library()
+# my_library.add_book(Book("1984", "George Orwell", 9.99))
+# my_library.list_all_books()  # Lists all books in the library
 
 
 # Advanced Level
 
 # 7. Design a Temperature class:
 # - Create a Temperature class with attributes for Celsius and Fahrenheit, but only store one internally (e.g., Celsius).
-# - Implement methods to convert between Celsius and Fahrenheit.
+# - Implement methods to convert between Celsius and Fahrenheit. to_fahrenheit
 # - Provide getter and setter methods that automatically convert between the two units, maintaining consistency.
 
 
