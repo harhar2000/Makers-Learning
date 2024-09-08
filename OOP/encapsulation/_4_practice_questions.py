@@ -28,7 +28,6 @@
 
 
 
-
 # rect = Rectangle(10, 5)
 # print("Area:", rect.calc_area())  # Output should be 50
 # print("Perimeter:", rect.calc_perimeter())  # Output should be 30
@@ -119,6 +118,34 @@ class BankAccount:
         return f"Transferred {amount} to account {target_account.account_number}"
 
  
+# Create two bank accounts
+account1 = BankAccount(12345, "Alice", 1000)
+account2 = BankAccount(67890, "Bob", 500)
+
+# Check the initial balances
+print(f"Alice's balance: {account1.check_balance()}")
+print(f"Bob's balance: {account2.check_balance()}")
+
+# Alice deposits 200 into her account
+print(account1.deposit(200))
+
+# Check Alice's new balance
+print(f"Alice's balance after deposit: {account1.check_balance()}")
+
+# Bob withdraws 100 from his account
+print(account2.withdraw(100))
+
+# Check Bob's new balance
+print(f"Bob's balance after withdrawal: {account2.check_balance()}")
+
+# Alice transfers 300 to Bob
+print(account1.transfer_money(account2, 300))
+
+# Check both balances after the transfer
+print(f"Alice's balance after transfer: {account1.check_balance()}")
+print(f"Bob's balance after transfer: {account2.check_balance()}")
+
+
 
 
 
@@ -210,14 +237,17 @@ class BankAccount:
 #         self.__price = price
 
 #     def get_price(self):
-#         return self.__price
+#         return f"{self.__price}"
     
 #     def set_price(self, price):
 #         if price > 0:
 #             self.__price = price
-
+#         else:
+#             print("Price must be positive")
+        
 #     def display_details(self, title, author, price):
-#         print(f"{title}: by {author},  £{price}")
+#         return f"{title}, {author} for £{price} "
+
 
 
 
