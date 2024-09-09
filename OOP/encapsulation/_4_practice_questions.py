@@ -81,7 +81,7 @@
 # - Write a method to transfer money from one account to another, ensuring the transfer is valid.
 
 class BankAccount:
-    def __init__(self, account_number:int, owner:str, balance:float):
+    def __init__(self, account_number:int, owner: str, balance: float):
         self.account_number = account_number
         self.owner = owner
         self.__balance = balance
@@ -89,33 +89,56 @@ class BankAccount:
     def check_balance(self):
         return self.__balance
 
-    def deposit(self, amount:float):
-        if amount < 0:
-            print("Value entered must be positive")
-        else: self.__balance = self.__balance + amount
-        return f"Your new balance is {self.__balance} "
+    def deposit(self):
+        pass
 
-    def withdraw(self, amount:float):
-        if amount < 0:
-            return f"Amount must be positive "
-        elif amount > self.__balance:
-                return f"Insufficient funds. You have {self.__balance} in your account."
+    def withdraw(self):
+        pass
+
+    def transfer(self):
+        pass
+
+
+
+
+
+
+# class BankAccount:
+#     def __init__(self, account_number:int, owner:str, balance:float):
+#         self.account_number = account_number
+#         self.owner = owner
+#         self.__balance = balance
+
+#     def check_balance(self):
+#         return self.__balance
+
+#     def deposit(self, amount:float):
+#         if amount < 0:
+#             print("Value entered must be positive")
+#         else: self.__balance = self.__balance + amount
+#         return f"Your new balance is {self.__balance} "
+
+#     def withdraw(self, amount:float):
+#         if amount < 0:
+#             return f"Amount must be positive "
+#         elif amount > self.__balance:
+#                 return f"Insufficient funds. You have {self.__balance} in your account."
             
-        self.__balance -= amount
-        return f"You withdrew {amount}. Your new balance is {self.__balance}"
+#         self.__balance -= amount
+#         return f"You withdrew {amount}. Your new balance is {self.__balance}"
         
-    def transfer_money(self, target_account, amount,):
-        # transfer amount must not be more than available balance
-        # ensure other account is valid - it should be another instance of BankAccount
-        # withdraw from one account -  deposit in another
+#     def transfer_money(self, target_account, amount,):
+#         # transfer amount must not be more than available balance
+#         # ensure other account is valid - it should be another instance of BankAccount
+#         # withdraw from one account -  deposit in another
 
-        if amount <=0:
-            return "Transfer amount must be positive. "
-        if self.__balance < amount:
-            return "Insufficient balance to complete the transfer. "
-        self.__balance -= amount
-        target_account.__balance += amount
-        return f"Transferred {amount} to account {target_account.account_number}"
+#         if amount <=0:
+#             return "Transfer amount must be positive. "
+#         if self.__balance < amount:
+#             return "Insufficient balance to complete the transfer. "
+#         self.__balance -= amount
+#         target_account.__balance += amount
+#         return f"Transferred {amount} to account {target_account.account_number}"
 
  
 # Create two bank accounts
