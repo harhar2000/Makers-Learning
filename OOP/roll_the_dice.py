@@ -1,3 +1,10 @@
+# Write a program simulating rolling two dice. 
+# Ask user if they want to roll the dice ('y' for yes, 'n' for no). 
+# If 'y', generate and display two random numbers between 0 and 6.
+# If 'n', display 'Thanks for playing' and exit. 
+# For any other input, display 'Invalid choice!'.
+
+
 #Loop
     # Ask: roll the dice?
     # If user enters y
