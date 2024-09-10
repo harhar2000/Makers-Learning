@@ -12,16 +12,13 @@
 import random
 
 while True:
-    choice = input("Roll the dice? (y/n): ").lower()
+    choice = input("Roll the Dice?:  ").lower()
     if choice == "n":
-        print("Thanks for playing!")
+        print("Thanks for playing")
         break
     elif choice == "y":
-        die1 = random.randint(1, 6)
-        die2 = random.randint(1, 6)
-        print(f"You rolled: {die1} and {die2}")
-    else:
+        die1 = random.randint(0,6)
+        die2 = random.randint(0,6)
+        print(f"({die1}, {die2})")
+    elif choice != "y":
         print("Invalid choice!")
-
-
-
